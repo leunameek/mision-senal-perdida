@@ -1,0 +1,31 @@
+{
+ "ir": {
+  "cathedral": {
+   "rt60": 3.71,
+   "duration": 4.8
+  },
+  "tunnel": {
+   "rt60": 2.41,
+   "duration": 3.0
+  },
+  "small_room": {
+   "rt60": 0.59,
+   "duration": 0.72
+  },
+  "cave": {
+   "rt60": 2.65,
+   "duration": 3.6
+  }
+ },
+ "frag2": {
+  "cleanDuration": 2.4567
+ },
+ "fragments": [
+  "Bienvenido a Reconocimiento de Patrones.",
+  "Las señales que acabas de restaurar",
+  "son los datos",
+  "con los que vas a enseñarle a una máquina",
+  "a reconocer patrones."
+ ],
+ "phrase": "La señal viaja por el aire y llega a tu oído."
+}

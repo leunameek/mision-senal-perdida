@@ -1,0 +1,41 @@
+/* P-3: H5P visual theme aligned with the OVA tokens (08). Loaded via customCss. */
+.h5p-content,
+.h5p-content * {
+	font-family: 'Source Sans 3', system-ui, sans-serif;
+}
+.h5p-content {
+	font-size: 16px;
+	color: #1b1f24;
+	background: transparent;
+}
+.h5p-joubelui-button,
+.h5p-question-buttons .h5p-joubelui-button,
+.h5p-content .h5p-joubelui-button {
+	background: #13315c;
+	border-radius: 6px;
+	font-weight: 600;
+}
+.h5p-joubelui-button:hover {
+	background: #0b2545;
+}
+.h5p-joubelui-button:focus,
+.h5p-content :focus-visible {
+	outline: 2px solid #c9a227;
+	outline-offset: 2px;
+	box-shadow: none;
+}
+.h5p-joubelui-score-bar-star {
+	color: #c9a227;
+}
+.h5p-question-feedback {
+	background: #f3f5f8;
+}
+.h5p-content .h5p-actions {
+	display: none;
+}
+.h5p-image-hotspot {
+	background: #13315c !important;
+}
+.h5p-dialogcards .h5p-dialogcards-cardwrap {
+	border-color: #d5dae1;
+}

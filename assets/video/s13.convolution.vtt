@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:12.000
+La convolución en 2 minutos
+
+2
+00:00:12.000 --> 00:00:35.000
+Toda entrada es una fila de impulsos, cada uno con su altura
+
+3
+00:00:35.000 --> 00:01:05.000
+El sistema responde a cada impulso con una copia de h(t)
+
+4
+00:01:05.000 --> 00:01:10.000
+¿Y si la entrada es solo δ(t)?
+
+5
+00:01:10.000 --> 00:01:40.000
+Las copias se suman: y(t) = ∫ x(τ) h(t − τ) dτ
+
+6
+00:01:40.000 --> 00:02:00.000
+y(t) = x(t) * h(t): así suena tu voz en una catedral

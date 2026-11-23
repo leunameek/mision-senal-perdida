@@ -1,0 +1,236 @@
+{
+ "s01.c4": {
+  "library": "H5P.ImageHotspots",
+  "title": "Plano de la emisora"
+ },
+ "s02.c2": {
+  "library": "H5P.SingleChoiceSet",
+  "title": "Diagnóstico",
+  "items": [
+   "917c9a9a-5b6b-4141-a431-732a1a0be1a9",
+   "0a9b3682-b106-410c-a2f9-63209ebee18d",
+   "a47cda80-5f7a-4f2a-aa5a-7692a8f53ce8",
+   "709b57e1-c326-4011-a483-34847b470dc5",
+   "639c3532-2ab4-404a-aa70-c351ff77e3f9"
+  ]
+ },
+ "s03.c2": {
+  "library": "H5P.ImageHotspots",
+  "title": "Anatomía de una señal de voz"
+ },
+ "s03.c3": {
+  "library": "H5P.Accordion",
+  "title": "Cómo se clasifican"
+ },
+ "s03.c4": {
+  "library": "H5P.TrueFalse",
+  "title": "Comprobación"
+ },
+ "s04.c2": {
+  "library": "H5P.Agamotto",
+  "title": "Dale vida a la senoidal"
+ },
+ "s04.c4": {
+  "library": "H5P.Blanks",
+  "title": "Calcula"
+ },
+ "s05.c2": {
+  "library": "H5P.ImageSlider",
+  "title": "La exponencial real"
+ },
+ "s05.c3": {
+  "library": "H5P.Accordion",
+  "title": "La exponencial compleja"
+ },
+ "s05.c4": {
+  "library": "H5P.MultiChoice",
+  "title": "Comprobación"
+ },
+ "s06.c2": {
+  "library": "H5P.Dialogcards",
+  "title": "Las señales singulares"
+ },
+ "s06.c3": {
+  "library": "H5P.DragText",
+  "title": "Cómo se relacionan"
+ },
+ "s06.c4": {
+  "library": "H5P.ImageHotspotQuestion",
+  "title": "Encuentra el impulso"
+ },
+ "s07.c2": {
+  "library": "H5P.DragQuestion",
+  "title": "¿Energía o potencia?"
+ },
+ "s07.c4": {
+  "library": "H5P.Essay",
+  "title": "Justificación"
+ },
+ "s08.c2": {
+  "library": "H5P.ImageSlider",
+  "title": "Antes y después"
+ },
+ "s08.c4": {
+  "library": "H5P.SingleChoiceSet",
+  "title": "¿Hacia dónde va?",
+  "items": [
+   "dee4e1cf-d914-4132-ae33-a680eba161b0",
+   "bc5cb679-538e-4d7c-a6bc-4e379c67bbc6",
+   "71e307ca-c87a-4a0c-ac61-e5cf697d2990"
+  ]
+ },
+ "s09.c2": {
+  "library": "H5P.Agamotto",
+  "title": "Comprime y expande"
+ },
+ "s09.c4": {
+  "library": "H5P.TrueFalse",
+  "title": "Comprobación"
+ },
+ "s10.c2": {
+  "library": "H5P.ImageSlider",
+  "title": "Cuatro combinaciones"
+ },
+ "s10.c4": {
+  "library": "H5P.MultiChoice",
+  "title": "Comprobación"
+ },
+ "s11.c2": {
+  "library": "H5P.DragText",
+  "title": "Completa la receta"
+ },
+ "s11.c3": {
+  "library": "H5P.MultiChoice",
+  "title": "Predice antes de mezclar"
+ },
+ "s12.c2": {
+  "library": "H5P.Accordion",
+  "title": "Las tres ideas clave"
+ },
+ "s12.c3": {
+  "library": "H5P.SingleChoiceSet",
+  "title": "¿Es LTI?",
+  "items": [
+   "c24b6023-0794-4630-abb0-44f569ccfcee",
+   "016317b0-f57f-44e0-a2d9-753907fd4f03",
+   "4f64f72d-d099-485e-af69-bc34a81b1460",
+   "c60ff38c-10fa-4e4b-a17d-6babb3cd5ecb"
+  ]
+ },
+ "s13.c2": {
+  "library": "H5P.InteractiveVideo",
+  "title": "La convolución en 2 minutos"
+ },
+ "s13.c3": {
+  "library": "H5P.Blanks",
+  "title": "Completa la fórmula"
+ },
+ "s14.c2": {
+  "library": "H5P.ImageSlider",
+  "title": "Paso a paso"
+ },
+ "s14.c3": {
+  "library": "H5P.DragText",
+  "title": "Calcula a mano"
+ },
+ "s14.c4": {
+  "library": "H5P.TrueFalse",
+  "title": "Comprobación"
+ },
+ "s15.c2": {
+  "library": "H5P.Dialogcards",
+  "title": "Las propiedades"
+ },
+ "s15.c4": {
+  "library": "H5P.MultiChoice",
+  "title": "Comprobación"
+ },
+ "s16.c3": {
+  "library": "H5P.DragQuestion",
+  "title": "¿Dónde se grabó?"
+ },
+ "s16.c5": {
+  "library": "H5P.Essay",
+  "title": "Decisión"
+ },
+ "s17.c2": {
+  "library": "H5P.Agamotto",
+  "title": "Construye una onda cuadrada"
+ },
+ "s17.c4": {
+  "library": "H5P.Blanks",
+  "title": "Comprobación"
+ },
+ "s18.c2": {
+  "library": "H5P.ImageHotspots",
+  "title": "Lee un espectro"
+ },
+ "s18.c3": {
+  "library": "H5P.MultiMediaChoice",
+  "title": "Adivina la señal"
+ },
+ "s19.c3": {
+  "library": "H5P.ImageSlider",
+  "title": "Tiempo y frecuencia"
+ },
+ "s19.c4": {
+  "library": "H5P.Accordion",
+  "title": "Propiedades para recordar"
+ },
+ "s19.c5": {
+  "library": "H5P.TrueFalse",
+  "title": "Comprobación"
+ },
+ "s20.c3": {
+  "library": "H5P.Summary",
+  "title": "Lo que descubriste"
+ },
+ "s21.c2": {
+  "library": "H5P.ImageHotspots",
+  "title": "Partes de un filtro"
+ },
+ "s21.c3": {
+  "library": "H5P.DragText",
+  "title": "La frecuencia de corte"
+ },
+ "s22.c3": {
+  "library": "H5P.DragQuestion",
+  "title": "Curvas y usos"
+ },
+ "s23.c3": {
+  "library": "H5P.MarkTheWords",
+  "title": "¿Qué atenúa?"
+ },
+ "s23.c4": {
+  "library": "H5P.MultiChoice",
+  "title": "Filtros en la vida real"
+ },
+ "s24.c3": {
+  "library": "H5P.MultiChoice",
+  "title": "Justifica tu combinación"
+ },
+ "s25.c3": {
+  "library": "H5P.SingleChoiceSet",
+  "title": "Repaso final",
+  "items": [
+   "b8d8c9f2-fbce-46c5-ae60-3f9b3a56d2de",
+   "c91883e4-97e8-4b1e-a51a-6d3289f4d2fe",
+   "76460a5a-7d6d-410c-a18f-12cab429b02d",
+   "65a77098-fce7-4d2d-ab05-fd02fa10b39d",
+   "b7454314-ffeb-467e-a118-3bd601ba20c4",
+   "a93231b3-3cb4-44c8-ad39-660df875338b",
+   "b19750ab-94bc-4f2b-aec0-a5669a059f56",
+   "a7de9c2f-6624-4c6e-a200-0e2b3573f091",
+   "39ce7415-f4e4-49a6-a667-3c2ba13c7568",
+   "f8515e21-1f89-433f-a7ab-381a36fa68a8"
+  ]
+ },
+ "s25.c4": {
+  "library": "H5P.Dialogcards",
+  "title": "Tu caja de herramientas"
+ },
+ "s26.c3": {
+  "library": "H5P.DocumentationTool",
+  "title": "Bitácora del ingeniero"
+ }
+}
