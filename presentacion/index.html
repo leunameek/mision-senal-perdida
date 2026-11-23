@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Misión: Señal Perdida — Presentación final</title>
+<meta name="description" content="Presentación final del OVA «Misión: Señal Perdida» — Multimedia Educativa, UMNG">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&display=swap">
+<link rel="stylesheet" href="deck.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #02060d; overflow: hidden; }
+  #stage { position: absolute; width: 1920px; height: 1080px; transform-origin: 0 0; }
+  #stage > section { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; display: none; overflow: hidden; isolation: isolate; }
+  #stage > section.active { display: block; }
+  #stage > section > aside { display: none; }
+  .pageno::after { content: none !important; }
+  @keyframes push-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+  @keyframes push-back { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+  #stage > section.enter-fwd { animation: push-in 550ms cubic-bezier(.2,.8,.2,1); }
+  #stage > section.enter-back { animation: push-back 550ms cubic-bezier(.2,.8,.2,1); }
+  #bar { position: fixed; left: 0; bottom: 0; height: 4px; background: #c9a227; transition: width 300ms; z-index: 10; }
+  #hint { position: fixed; right: 16px; bottom: 12px; font: 13px system-ui, sans-serif; color: #8fa3bf; opacity: .7; z-index: 10; }
+  #notes { display: none; position: fixed; left: 0; right: 0; bottom: 4px; max-height: 30vh; overflow: auto; background: rgba(5,13,26,.95); color: #e9eef6; font: 17px/1.5 system-ui, sans-serif; padding: 14px 20px; z-index: 11; }
+  #notes.on { display: block; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style></head>
+<body>
+<div id="stage">
+<section id="cover" class="dark" data-transition="push">
+<img class="bleed zoom" src="img/cover.jpg" alt="Título del tráiler: Misión: Señal Perdida, con la onda senoidal sobre la retícula de osciloscopio" style="width:1920px;height:1080px;object-fit:cover">
+<div class="bleed" style="background:linear-gradient(180deg, rgba(7,20,40,0) 55%, rgba(7,20,40,0.95) 100%)"></div>
+<div style="position:absolute;left:128px;top:96px;width:1664px">
+<p class="eyebrow in" style="--i:1">03:00 A. M. · LLEGÓ UNA TRANSMISIÓN · ESTÁ ROTA</p>
+</div>
+<div style="position:absolute;left:128px;top:812px;width:1664px;display:flex;justify-content:space-between;align-items:flex-end">
+<div class="in" style="--i:3">
+<p style="font-size:32px;color:#e9eef6">OVA gamificado de repaso de Procesamiento de Señales</p>
+<p style="font-size:24px;color:#a9bbd4">Reconocimiento de Patrones · Multimedia Educativa · UMNG</p>
+</div>
+<div class="in" style="--i:4;text-align:right">
+<p style="font-size:24px;color:#e9eef6">Porras Villalobos Simón</p>
+<p style="font-size:24px;color:#e9eef6">Solarte Melo Jorge Emanuel</p>
+</div>
+</div>
+<aside>Abrimos con el último fotograma de nuestro tráiler. La historia del OVA arranca así: a las 3:00 a. m. llega a la emisora universitaria una transmisión rota, y el estudiante, como ingeniero de sonido en prácticas, tiene que restaurarla. Si hay tiempo, reproducir el tráiler de 45 segundos aquí.</aside>
+</section>
+<section id="d1" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow1"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 115.2 -40 204.8 -40 320.0 130 S 524.8 300 640.0 130 S 844.8 -40 960.0 130 S 1164.8 300 1280.0 130 S 1484.8 -40 1600.0 130 S 1804.8 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="16" opacity="0.35" filter="url(#glow1)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 115.2 -40 204.8 -40 320.0 130 S 524.8 300 640.0 130 S 844.8 -40 960.0 130 S 1164.8 300 1280.0 130 S 1484.8 -40 1600.0 130 S 1804.8 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#e3c14f"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 115.2 -170 204.8 -170 320.0 0 S 524.8 170 640.0 0 S 844.8 -170 960.0 0 S 1164.8 170 1280.0 0 S 1484.8 -170 1600.0 0 S 1804.8 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">01</p>
+<p class="eyebrow slide" style="--i:1">NECESIDAD EDUCATIVA</p>
+<h1 class="slide" style="--i:2">El problema</h1>
+<p class="question slide" style="--i:3">¿Por qué se olvida lo que ya se aprobó?</p>
+<aside>Primer punto: la necesidad educativa. El problema, su contexto y la población a la que va dirigido el OVA.</aside>
+</section>
+<section id="necesidad" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">01</p>
+<p class="eyebrow">01 · NECESIDAD EDUCATIVA</p>
+<h2 style="width:1500px">Los estudiantes llegan a Reconocimiento de Patrones con la base de señales desdibujada</h2>
+<div class="row" style="margin-top:16px">
+<div class="card in" style="--i:1">
+<p class="tag">EL PROBLEMA</p>
+<p>Ya aprobaron la electiva de Procesamiento de Señales, pero no recuerdan ni aplican con fluidez señales básicas, operaciones, convolución, Fourier y filtrado.</p>
+</div>
+<div class="card in" style="--i:2">
+<p class="tag">EL COSTO</p>
+<p>La docente debe invertir tiempo de clase en retomar lo que ya debería estar consolidado, y el curso avanza más lento.</p>
+</div>
+<div class="card in" style="--i:3">
+<p class="tag">EL PEDIDO</p>
+<p>Un material dinámico para una sesión de repaso de 3 horas: cargar un audio y convolucionarlo con salas, y filtrarlo moviendo la frecuencia de corte.</p>
+</div>
+</div>
+<div class="pageno"></div>
+<aside>La necesidad surge de la observación directa de la docente de Reconocimiento de Patrones. El repaso magistral no basta para conceptos tan abstractos y matemáticos. Ella misma sugirió las dos experiencias que se volvieron el corazón del OVA: convolucionar audio con respuestas al impulso y filtrar con un control deslizante.</aside>
+</section>
+<section id="poblacion" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">01</p>
+<p class="eyebrow">01 · NECESIDAD EDUCATIVA · POBLACIÓN Y CONTEXTO</p>
+<h2>¿Para quién lo diseñamos?</h2>
+<div class="row">
+<div class="card in" style="--i:1">
+<p class="num">19–24</p>
+<p>años; pregrado en Ingeniería en Multimedia, UMNG, matriculados en Reconocimiento de Patrones.</p>
+</div>
+<div class="card in" style="--i:2">
+<p class="num">3 h</p>
+<p>una sesión presencial de repaso, en aula con computador, audífonos e internet.</p>
+</div>
+<div class="card in" style="--i:3">
+<p class="num">Alta</p>
+<p>familiaridad con videojuegos y multimedia; prefieren lo visual y práctico a la lectura extensa.</p>
+</div>
+</div>
+<div class="card in" style="--i:4;margin-top:32px;flex:none">
+<p class="tag">BARRERAS → CÓMO LAS ATENDEMOS</p>
+<p>Ansiedad matemática → ver y escuchar antes de calcular · Olvido → una pantalla por concepto · Niveles distintos → diagnóstico con ruta personalizada</p>
+</div>
+<div class="pageno"></div>
+<aside>Población: jóvenes adultos de Ingeniería en Multimedia que ya cursaron la electiva. Competencias tecnológicas medias-altas. Las tres barreras que identificamos son la ansiedad matemática, el olvido natural y la heterogeneidad del grupo; cada una tiene una respuesta concreta en el diseño.</aside>
+</section>
+<section id="estado" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">01</p>
+<p class="eyebrow">01 · NECESIDAD EDUCATIVA · ESTADO DEL ARTE</p>
+<h2>Ningún recurso existente integra los cinco temas con audio propio</h2>
+<table class="in" style="--i:1;width:1664px;font-size:26px;color:#3d4a5c">
+<tr style="background:#e6e0cf"><th style="width:28%;text-align:left">Recurso</th><th style="width:15%">Audio propio</th><th style="width:15%">Guía conceptual</th><th style="width:14%">Evaluación</th><th style="width:14%">En Moodle</th><th style="width:14%">Gamificación</th></tr>
+<tr><td>PhET · Fourier: Making Waves</td><td>No</td><td>Parcial</td><td>No</td><td>No</td><td>Parcial</td></tr>
+<tr><td>Seeing Circles, Sines, and Signals</td><td>No</td><td>Sí</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Falstad · Fourier Series Applet</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>OpenAIR (respuestas al impulso)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>MathWorks · Signal Processing Onramp</td><td>No</td><td>Sí</td><td>Sí</td><td>No</td><td>Parcial</td></tr>
+<tr><td>MIT Mathlets</td><td>No</td><td>Parcial</td><td>No</td><td>No</td><td>No</td></tr>
+<tr style="background:#0b2545"><td style="color:#f3f1ea">Misión: Señal Perdida</td><td style="color:#e3c14f">Sí</td><td style="color:#e3c14f">Sí</td><td style="color:#e3c14f">Sí</td><td style="color:#e3c14f">Sí</td><td style="color:#e3c14f">Sí</td></tr>
+</table>
+<div class="pageno"></div>
+<aside>Analizamos seis recursos. Cada uno profundiza en un concepto puntual, pero ninguno integra los cinco temas en una experiencia guiada y breve, ninguno deja usar el audio del propio estudiante y ninguno vive dentro del aula virtual. Ese es nuestro valor diferencial.</aside>
+</section>
+<section id="d2" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow2"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 86.4 -40 153.6 -40 240.0 130 S 393.6 300 480.0 130 S 633.6 -40 720.0 130 S 873.6 300 960.0 130 S 1113.6 -40 1200.0 130 S 1353.6 300 1440.0 130 S 1593.6 -40 1680.0 130 S 1833.6 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="16" opacity="0.35" filter="url(#glow2)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 86.4 -40 153.6 -40 240.0 130 S 393.6 300 480.0 130 S 633.6 -40 720.0 130 S 873.6 300 960.0 130 S 1113.6 -40 1200.0 130 S 1353.6 300 1440.0 130 S 1593.6 -40 1680.0 130 S 1833.6 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#e3c14f"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 86.4 -170 153.6 -170 240.0 0 S 393.6 170 480.0 0 S 633.6 -170 720.0 0 S 873.6 170 960.0 0 S 1113.6 -170 1200.0 0 S 1353.6 170 1440.0 0 S 1593.6 -170 1680.0 0 S 1833.6 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">02</p>
+<p class="eyebrow slide" style="--i:1">PROPUESTA DE SOLUCIÓN</p>
+<h1 class="slide" style="--i:2">Convertir el repaso en una misión</h1>
+<p class="question slide" style="--i:3">¿Y si repasar se sintiera como jugar?</p>
+<aside>Segundo punto: cómo el producto multimedia resuelve la problemática y qué impactos esperamos.</aside>
+</section>
+<section id="solucion" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true" style="right:auto;left:-40px;text-align:left">02</p>
+<img class="tilt shot" src="img/poster.jpg" alt="Póster vertical de Misión: Señal Perdida con la onda rota en cinco fragmentos, el título y las seis insignias" style="position:absolute;left:1262px;top:110px;width:500px;height:889px;object-fit:cover">
+<div style="width:1020px">
+<p class="eyebrow">02 · PROPUESTA DE SOLUCIÓN</p>
+<h2>Restaura la transmisión en cinco misiones</h2>
+<p class="in" style="--i:1;margin-bottom:40px">El estudiante es un ingeniero de sonido en prácticas. Cada misión repara una capa del daño manipulando audio real, y al superarla gana una insignia y un fragmento del mensaje.</p>
+<div class="col">
+<p class="mono in" style="--i:2;font-size:28px;color:#e9eef6"><span style="color:#c9a227">M1</span> Sala de osciloscopios · señales</p>
+<p class="mono in" style="--i:3;font-size:28px;color:#e9eef6"><span style="color:#c9a227">M2</span> Mesa de mezclas · operaciones</p>
+<p class="mono in" style="--i:4;font-size:28px;color:#e9eef6"><span style="color:#c9a227">M3</span> La sala del eco · convolución</p>
+<p class="mono in" style="--i:5;font-size:28px;color:#e9eef6"><span style="color:#c9a227">M4</span> El prisma · Fourier</p>
+<p class="mono in" style="--i:6;font-size:28px;color:#e9eef6"><span style="color:#c9a227">M5</span> Cabina de limpieza · filtrado</p>
+</div>
+</div>
+<div class="pageno" style="right:720px"></div>
+<aside>La respuesta es Misión: Señal Perdida, un Objeto Virtual de Aprendizaje para la sesión de 3 horas. Una narrativa da unidad a los cinco temas que pidió la docente; cada misión termina en un punto de control con audio real. Al final, los cinco fragmentos se unen y el mensaje conecta el repaso con Reconocimiento de Patrones.</aside>
+</section>
+<section id="impactos" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">02</p>
+<p class="eyebrow">02 · PROPUESTA DE SOLUCIÓN · IMPACTOS ESPERADOS</p>
+<h2>Lo que esperamos que cambie</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div class="card fragment">
+<p class="tag">EN EL AULA</p>
+<h3>Tiempo de clase recuperado</h3>
+<p class="small">Menos horas retomando la electiva; más tiempo para los contenidos propios de Reconocimiento de Patrones.</p>
+</div>
+<div class="card fragment">
+<p class="tag">EN EL APRENDIZAJE</p>
+<h3>Concepto + intuición auditiva</h3>
+<p class="small">Escuchar y ver el efecto de convolucionar y filtrar; llegar a justificar decisiones y crear un efecto propio.</p>
+</div>
+<div class="card fragment">
+<p class="tag">PEDAGÓGICO Y TECNOLÓGICO</p>
+<h3>Modelo replicable</h3>
+<p class="small">Repaso gamificado alineado con Bloom y un banco de actividades H5P reutilizable en futuras cohortes.</p>
+</div>
+<div class="card fragment">
+<p class="tag">AUTONOMÍA</p>
+<h3>Disponible en Moodle</h3>
+<p class="small">Antes, durante o después de clase, para repasar a su ritmo los temas que más les cuestan.</p>
+</div>
+</div>
+<div class="pageno"></div>
+<aside>Impactos: recuperar tiempo de clase, fortalecer la comprensión y la intuición perceptual, dejar un modelo replicable y un banco reutilizable, y dar autonomía. La propuesta se alinea con el Informe Horizon y el Radar de Innovación Educativa del Tec de Monterrey, que señalan el aprendizaje experiencial, los recursos interactivos y la gamificación como tendencias.</aside>
+</section>
+<section id="d3" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow3"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 69.1 -40 122.9 -40 192.0 130 S 314.9 300 384.0 130 S 506.9 -40 576.0 130 S 698.9 300 768.0 130 S 890.9 -40 960.0 130 S 1082.9 300 1152.0 130 S 1274.9 -40 1344.0 130 S 1466.9 300 1536.0 130 S 1658.9 -40 1728.0 130 S 1850.9 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="16" opacity="0.35" filter="url(#glow3)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 69.1 -40 122.9 -40 192.0 130 S 314.9 300 384.0 130 S 506.9 -40 576.0 130 S 698.9 300 768.0 130 S 890.9 -40 960.0 130 S 1082.9 300 1152.0 130 S 1274.9 -40 1344.0 130 S 1466.9 300 1536.0 130 S 1658.9 -40 1728.0 130 S 1850.9 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#e3c14f"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 69.1 -170 122.9 -170 192.0 0 S 314.9 170 384.0 0 S 506.9 -170 576.0 0 S 698.9 170 768.0 0 S 890.9 -170 960.0 0 S 1082.9 170 1152.0 0 S 1274.9 -170 1344.0 0 S 1466.9 170 1536.0 0 S 1658.9 -170 1728.0 0 S 1850.9 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">03</p>
+<p class="eyebrow slide" style="--i:1">META INSTRUCCIONAL</p>
+<h1 class="slide" style="--i:2">Del recordar al crear</h1>
+<p class="question slide" style="--i:3">¿Hasta dónde llega el estudiante en tres horas?</p>
+<aside>Tercer punto: los objetivos de aprendizaje alineados con la taxonomía de Bloom y las teorías que sustentan el diseño.</aside>
+</section>
+<section id="meta" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">03</p>
+<p class="eyebrow">03 · META INSTRUCCIONAL</p>
+<p style="font-size:36px;line-height:1.35;color:#e9eef6;width:1664px">Al finalizar la sesión, el estudiante reconoce las señales básicas, aplica operaciones, convolución y Fourier, y <span style="color:#c9a227">selecciona y justifica un filtro para limpiar audio real</span>, integrándolo todo en <span style="color:#c9a227">un efecto sonoro propio</span>.</p>
+<div style="display:flex;gap:24px;align-items:flex-end;margin-top:56px;height:470px">
+<div class="col in" style="--i:1;flex:1;gap:12px"><p class="mono small" style="color:#a9bbd4">Diagnóstico</p><div style="height:90px;background:#16305a;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Recordar</p></div>
+<div class="col in" style="--i:2;flex:1;gap:12px"><p class="mono small" style="color:#a9bbd4">Repaso</p><div style="height:150px;background:#1b3a6b;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Comprender</p></div>
+<div class="col in" style="--i:3;flex:1;gap:12px"><p class="mono small" style="color:#a9bbd4">Práctica</p><div style="height:210px;background:#1f4a86;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Aplicar</p></div>
+<div class="col in" style="--i:4;flex:1;gap:12px"><p class="mono small" style="color:#6fb6ff">OA1 · OA2 · OA4</p><div style="height:270px;background:#1f5fa8;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Analizar</p></div>
+<div class="col in" style="--i:5;flex:1;gap:12px"><p class="mono small" style="color:#6fb6ff">OA3 · OA5</p><div style="height:330px;background:#3f7fc8;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Evaluar</p></div>
+<div class="col in" style="--i:6;flex:1;gap:12px"><p class="mono small" style="color:#c9a227">OA6</p><div style="height:390px;background:#c9a227;border-radius:10px 10px 0 0"></div><p style="font-size:28px;color:#e9eef6;font-weight:700">Crear</p></div>
+</div>
+<div class="pageno"></div>
+<aside>La meta llega hasta Crear en la taxonomía de Bloom revisada y para la era digital. Encima de cada nivel está el objetivo que alcanza ese techo: OA1 señales, OA2 operaciones y OA4 Fourier llegan a Analizar; OA3 convolución y OA5 filtrado llegan a Evaluar; OA6, diseñar un efecto con convolución y filtrado, es Crear. El diagnóstico trabaja Recordar.</aside>
+</section>
+<section id="enfoque" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">03</p>
+<p class="eyebrow">03 · META INSTRUCCIONAL · ENFOQUE PEDAGÓGICO</p>
+<h2>Cada misión recorre el ciclo de Kolb</h2>
+<div class="row" style="align-items:stretch">
+<div style="flex:1.6;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div class="card in" style="--i:1"><p class="tag">1 · EXPERIENCIA CONCRETA</p><p class="small">Escuchar el fragmento dañado de la transmisión.</p></div>
+<div class="card in" style="--i:2"><p class="tag">2 · OBSERVACIÓN REFLEXIVA</p><p class="small">Comparar el antes y el después: ver y oír qué cambió.</p></div>
+<div class="card in" style="--i:4"><p class="tag">4 · EXPERIMENTACIÓN ACTIVA</p><p class="small">Manipular audio real en el módulo del punto de control.</p></div>
+<div class="card in" style="--i:3"><p class="tag">3 · CONCEPTUALIZACIÓN</p><p class="small">Explicación breve del tema, una idea por pantalla.</p></div>
+</div>
+<div class="card in" style="--i:5;flex:1;background:#0b2545;border-color:#0b2545">
+<p class="tag" style="color:#c9a227">TAMBIÉN NOS APOYAMOS EN</p>
+<p class="small" style="color:#e9eef6;margin-bottom:16px"><b>Constructivismo:</b> el significado se construye manipulando y verificando.</p>
+<p class="small" style="color:#e9eef6;margin-bottom:16px"><b>Aprendizaje multimedia (Mayer):</b> segmentación, señalización, contigüidad, coherencia y personalización, registrados pantalla por pantalla.</p>
+<p class="small" style="color:#e9eef6;margin-bottom:16px"><b>Gamificación:</b> narrativa, misiones e insignias.</p>
+<p class="small" style="color:#e9eef6"><b>Diseño instruccional:</b> ADDIE + ASSURE + Dick &amp; Carey + SAM.</p>
+</div>
+</div>
+<div class="pageno"></div>
+<aside>El ciclo de Kolb ordena cada misión: escuchar el daño, comparar, conceptualizar y experimentar en el módulo. Lo complementan el constructivismo, la teoría cognitiva del aprendizaje multimedia de Mayer, cuyos principios quedaron registrados en el guion pantalla por pantalla, y la gamificación. El proceso sigue ADDIE, con el análisis del estudiante de ASSURE, la alineación objetivo-actividad-evaluación de Dick y Carey, y la iteración por prototipos de SAM.</aside>
+</section>
+<section id="d4" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow4"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 57.6 -40 102.4 -40 160.0 130 S 262.4 300 320.0 130 S 422.4 -40 480.0 130 S 582.4 300 640.0 130 S 742.4 -40 800.0 130 S 902.4 300 960.0 130 S 1062.4 -40 1120.0 130 S 1222.4 300 1280.0 130 S 1382.4 -40 1440.0 130 S 1542.4 300 1600.0 130 S 1702.4 -40 1760.0 130 S 1862.4 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="16" opacity="0.35" filter="url(#glow4)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 57.6 -40 102.4 -40 160.0 130 S 262.4 300 320.0 130 S 422.4 -40 480.0 130 S 582.4 300 640.0 130 S 742.4 -40 800.0 130 S 902.4 300 960.0 130 S 1062.4 -40 1120.0 130 S 1222.4 300 1280.0 130 S 1382.4 -40 1440.0 130 S 1542.4 300 1600.0 130 S 1702.4 -40 1760.0 130 S 1862.4 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#e3c14f"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 57.6 -170 102.4 -170 160.0 0 S 262.4 170 320.0 0 S 422.4 -170 480.0 0 S 582.4 170 640.0 0 S 742.4 -170 800.0 0 S 902.4 170 960.0 0 S 1062.4 -170 1120.0 0 S 1222.4 170 1280.0 0 S 1382.4 -170 1440.0 0 S 1542.4 170 1600.0 0 S 1702.4 -170 1760.0 0 S 1862.4 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">04</p>
+<p class="eyebrow slide" style="--i:1">CONTENIDOS</p>
+<h1 class="slide" style="--i:2">Cinco temas, una historia</h1>
+<p class="question slide" style="--i:3">¿Cómo se ordena todo en 180 minutos?</p>
+<aside>Cuarto punto: la estructura temática, la secuencia y la organización de la información dentro del recurso.</aside>
+</section>
+<section id="contenidos" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">04</p>
+<p class="eyebrow">04 · CONTENIDOS · ESTRUCTURA TEMÁTICA</p>
+<h2>180 minutos, siete bloques</h2>
+<div class="col" style="gap:18px">
+<div class="row in" style="--i:1;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">Briefing · Sala de control</p><div style="width:300px;height:44px;background:#3f7fc8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">15 min</p><p class="small" style="flex:1">Narrativa, plano y diagnóstico · 01–02</p></div>
+<div class="row in" style="--i:2;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">M1 · Sala de osciloscopios</p><div style="width:500px;height:44px;background:#1f5fa8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">25 min</p><p class="small" style="flex:1">Señales básicas · 03–07</p></div>
+<div class="row in" style="--i:3;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">M2 · Mesa de mezclas</p><div style="width:500px;height:44px;background:#1f5fa8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">25 min</p><p class="small" style="flex:1">Operaciones · 08–11</p></div>
+<div class="row in" style="--i:4;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">M3 · La sala del eco</p><div style="width:700px;height:44px;background:#c9a227;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">35 min</p><p class="small" style="flex:1">Convolución · 12–16</p></div>
+<div class="row in" style="--i:5;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">M4 · El prisma</p><div style="width:600px;height:44px;background:#1f5fa8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">30 min</p><p class="small" style="flex:1">Fourier · 17–20</p></div>
+<div class="row in" style="--i:6;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">M5 · Cabina de limpieza</p><div style="width:600px;height:44px;background:#1f5fa8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">30 min</p><p class="small" style="flex:1">Filtrado · 21–24</p></div>
+<div class="row in" style="--i:7;align-items:center;gap:24px"><p style="width:430px;font-size:28px;color:#e9eef6;font-weight:600">Cierre · Transmisión restaurada</p><div style="width:400px;height:44px;background:#3f7fc8;border-radius:8px"></div><p class="mono small" style="color:#e9eef6;width:110px">20 min</p><p class="small" style="flex:1">Repaso, síntesis y efecto propio · 25–26</p></div>
+</div>
+<div class="pageno"></div>
+<aside>La estructura es una historia de siete bloques. Las barras son proporcionales al tiempo: la Misión 3, convolución, es la más larga, con 35 minutos, porque es la experiencia que la docente pidió explícitamente y la de mayor peso. Cada concepto tiene su propia pantalla para recordarlo y reforzarlo.</aside>
+</section>
+<section id="secuencia" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">04</p>
+<p class="eyebrow">04 · CONTENIDOS · SECUENCIA Y NAVEGACIÓN</p>
+<h2>Lineal por defecto, con rutas y bucles de repaso</h2>
+<img class="zoom shot" src="img/mapa_navegacion.png" alt="Mapa de navegación: inicio, pantallas 01 y 02, cinco columnas de misiones con su punto de control y el cierre; flechas punteadas para la ruta del diagnóstico y los bucles de repaso" style="width:1664px;height:470px;object-fit:contain;background:#ffffff;border-radius:12px">
+<div class="row" style="margin-top:28px">
+<p class="small in" style="--i:1;flex:1"><b>Cada pantalla:</b> introducción → exploración → práctica → comprobación → cierre.</p>
+<p class="small in" style="--i:2;flex:1"><b>Diagnóstico (02):</b> recomienda empezar en la pantalla 03, 12 o 21.</p>
+<p class="small in" style="--i:3;flex:1"><b>Punto de control:</b> si la justificación es incompleta, vuelve a la primera pantalla de la misión.</p>
+</div>
+<div class="pageno"></div>
+<aside>El mapa de navegación muestra el recorrido por defecto, lineal, y las dos desviaciones: la ruta que recomienda el diagnóstico (Misión 3 o Misión 5) y el bucle de repaso de cada punto de control. Dentro de cada pantalla los componentes siguen siempre la misma secuencia, y el índice lateral permite volver a cualquier capítulo en todo momento.</aside>
+</section>
+<section id="d5" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow5"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 49.4 -40 87.8 -40 137.1 130 S 224.9 300 274.3 130 S 362.1 -40 411.4 130 S 499.2 300 548.6 130 S 636.3 -40 685.7 130 S 773.5 300 822.9 130 S 910.6 -40 960.0 130 S 1047.8 300 1097.1 130 S 1184.9 -40 1234.3 130 S 1322.1 300 1371.4 130 S 1459.2 -40 1508.6 130 S 1596.3 300 1645.7 130 S 1733.5 -40 1782.9 130 S 1870.6 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="16" opacity="0.35" filter="url(#glow5)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 49.4 -40 87.8 -40 137.1 130 S 224.9 300 274.3 130 S 362.1 -40 411.4 130 S 499.2 300 548.6 130 S 636.3 -40 685.7 130 S 773.5 300 822.9 130 S 910.6 -40 960.0 130 S 1047.8 300 1097.1 130 S 1184.9 -40 1234.3 130 S 1322.1 300 1371.4 130 S 1459.2 -40 1508.6 130 S 1596.3 300 1645.7 130 S 1733.5 -40 1782.9 130 S 1870.6 300 1920.0 130" fill="none" stroke="#6fb6ff" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#e3c14f"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 49.4 -170 87.8 -170 137.1 0 S 224.9 170 274.3 0 S 362.1 -170 411.4 0 S 499.2 170 548.6 0 S 636.3 -170 685.7 0 S 773.5 170 822.9 0 S 910.6 -170 960.0 0 S 1047.8 170 1097.1 0 S 1184.9 -170 1234.3 0 S 1322.1 170 1371.4 0 S 1459.2 -170 1508.6 0 S 1596.3 170 1645.7 0 S 1733.5 -170 1782.9 0 S 1870.6 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">05</p>
+<p class="eyebrow slide" style="--i:1">HERRAMIENTAS</p>
+<h1 class="slide" style="--i:2">H5P donde se puede, código donde no</h1>
+<p class="question slide" style="--i:3">¿Con qué se construyó cada pieza?</p>
+<aside>Quinto punto: por qué elegimos cada tipo de contenido H5P y con qué herramientas creamos los recursos gráficos, sonoros y audiovisuales.</aside>
+</section>
+<section id="h5p" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">05</p>
+<p class="eyebrow">05 · HERRAMIENTAS · H5P</p>
+<h2>18 tipos interactivos, elegidos por la intención de cada momento</h2>
+<div class="row">
+<div class="card in" style="--i:1"><p class="tag">EXPLORAR</p><p class="small">Image Hotspots · Accordion · Agamotto · Image Slider · Dialog Cards</p></div>
+<div class="card in" style="--i:2"><p class="tag">PRACTICAR</p><p class="small">Drag and Drop · Drag the Words · Fill in the Blanks · Mark the Words</p></div>
+<div class="card in" style="--i:3"><p class="tag">COMPROBAR</p><p class="small">True/False · Multiple Choice · Single Choice Set · Image Choice · Find the Hotspot · Interactive Video</p></div>
+<div class="card in" style="--i:4"><p class="tag">SINTETIZAR Y CREAR</p><p class="small">Summary · Essay · Documentation Tool</p></div>
+</div>
+<div class="card in" style="--i:5;flex:none;margin-top:32px;background:#0b2545;border-color:#0b2545">
+<p style="color:#e9eef6">Todo vive en un <b style="color:#e3c14f">H5P Interactive Book</b> de 26 capítulos, con Text, Image, Audio, Table e IFrame Embed: <b style="color:#e3c14f">23 tipos en total</b>. ¿Por qué H5P? Retroalimentación inmediata por opción, puntaje que Moodle registra y contenido reutilizable.</p>
+</div>
+<div class="pageno"></div>
+<aside>Primero verificamos qué puede hacer H5P y después diseñamos la interacción. Elegimos cada tipo según la intención: explorar sin calificación, practicar y clasificar, comprobar con retroalimentación inmediata, y sintetizar o crear. Los 51 componentes se generan desde archivos YAML legibles que se transcribieron del guion, con las etiquetas de la interfaz en español.</aside>
+</section>
+<section id="modulos" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">05</p>
+<p class="eyebrow">05 · HERRAMIENTAS · LO QUE H5P NO PUEDE HACER</p>
+<h2>Seis módulos propios con Web Audio API</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px 32px">
+<div class="col in" style="--i:1;gap:12px"><img src="img/cap_m1.png" alt="Generador de señales: la senoidal del estudiante superpuesta a la objetivo" style="width:533px;height:200px;object-fit:contain;background:#eef1f5;border-radius:12px;box-shadow:0 24px 54px rgba(0,0,0,0.55)"><p class="small"><b style="color:#e9eef6">M1 · Generador:</b> iguala A, f y φ</p></div>
+<div class="col in" style="--i:2;gap:12px"><img src="img/cap_m2.png" alt="Sandbox de operaciones con la pila desplazar, escalar e invertir y correlación 0,99" style="width:533px;height:200px;object-fit:contain;background:#eef1f5;border-radius:12px;box-shadow:0 24px 54px rgba(0,0,0,0.55)"><p class="small"><b style="color:#e9eef6">M2 · Sandbox:</b> deshace x(−2(t − 0,5))</p></div>
+<div class="col in" style="--i:3;gap:12px"><img src="img/cap_m3.png" alt="Laboratorio de convolución con h(t) de la catedral y la salida y(t)" style="width:533px;height:200px;object-fit:contain;background:#eef1f5;border-radius:12px;box-shadow:0 24px 54px rgba(0,0,0,0.55)"><p class="small"><b style="color:#e9eef6">M3 · Convolución:</b> tu audio en 4 salas</p></div>
+<div class="col in" style="--i:4;gap:12px"><img src="img/cap_m4.png" alt="Constructor de series aproximando una onda cuadrada con armónicos impares" style="width:533px;height:200px;object-fit:contain;background:#eef1f5;border-radius:12px;box-shadow:0 24px 54px rgba(0,0,0,0.55)"><p class="small"><b style="color:#e9eef6">M4 · Series:</b> mínimos armónicos</p></div>
+<div class="col in" style="--i:5;gap:12px"><img src="img/cap_m5.png" alt="Laboratorio de filtrado con rechaza banda en 60 Hz, pasa bajas en 8 kHz y espectro antes y después" style="width:533px;height:200px;object-fit:contain;background:#eef1f5;border-radius:12px;box-shadow:0 24px 54px rgba(0,0,0,0.55)"><p class="small"><b style="color:#e9eef6">M5 · Filtrado:</b> dos etapas, espectro en vivo</p></div>
+<div class="card in" style="--i:6;display:flex;flex-direction:column;justify-content:center;gap:8px"><p class="tag">M6 · ESTUDIO INTEGRADOR</p><p class="small">Combina respuesta al impulso y filtros, y exporta tu efecto en .wav.</p></div>
+</div>
+<div class="pageno"></div>
+<aside>H5P no procesa audio en tiempo real, así que convolución, filtrado y síntesis son componentes propios hechos con la Web Audio API: ConvolverNode, BiquadFilterNode y AnalyserNode. Toda la matemática vive en funciones puras con pruebas automáticas. El estudiante puede cargar su propio audio, que nunca sale del navegador. En el libro H5P se incrustan desde GitHub Pages, con una versión pregrabada de respaldo debajo.</aside>
+</section>
+<section id="recursos" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">05</p>
+<p class="eyebrow">05 · HERRAMIENTAS COMPLEMENTARIAS</p>
+<h2>Todos los medios se generan por código</h2>
+<div class="row">
+<div class="card in" style="--i:1"><p class="num">61</p><h3>Gráficos</h3><p class="small">Ilustraciones y gráficas en Python con Matplotlib, con el estilo del OVA; los espacios acústicos dibujados como vectores.</p></div>
+<div class="card in" style="--i:2"><p class="num">4</p><h3>Sonido</h3><p class="small">Respuestas al impulso sintetizadas con NumPy y SciPy, cada RT60 verificado dentro de ±15 %; voz con espeak-ng.</p></div>
+<div class="card in" style="--i:3"><p class="num">2:00</p><h3>Audiovisual</h3><p class="small">Video de convolución animado y subtitulado con FFmpeg; tráiler de 45 s con OpenMontage y HyperFrames.</p></div>
+</div>
+<p class="in" style="--i:4;margin-top:40px;font-size:24px;color:#3d4a5c"><b style="color:#0b2545">Plataforma:</b> SvelteKit · Web Audio API · Canvas · h5p-standalone · SCORM 1.2 · Moodle · GitHub Pages · Vitest y Playwright para las pruebas</p>
+<div class="pageno"></div>
+<aside>Decidimos generar todos los recursos por código, de forma determinista: misma semilla, mismos archivos. Las respuestas al impulso de catedral, túnel, sala pequeña y cueva son sintéticas en vez de OpenAIR, y comprobamos su RT60 con integración de Schroeder. La música del tráiler es de Pixabay, con licencia libre.</aside>
+</section>
+<section id="d6" class="divider" data-transition="push">
+<svg class="divwave" aria-label="Onda senoidal que se dibuja de izquierda a derecha" viewBox="0 0 1920 260" width="1920" height="260"><defs><filter id="glow6"><feGaussianBlur stdDeviation="9"/></filter></defs><path d="M0 130 C 43.2 -40 76.8 -40 120.0 130 S 196.8 300 240.0 130 S 316.8 -40 360.0 130 S 436.8 300 480.0 130 S 556.8 -40 600.0 130 S 676.8 300 720.0 130 S 796.8 -40 840.0 130 S 916.8 300 960.0 130 S 1036.8 -40 1080.0 130 S 1156.8 300 1200.0 130 S 1276.8 -40 1320.0 130 S 1396.8 300 1440.0 130 S 1516.8 -40 1560.0 130 S 1636.8 300 1680.0 130 S 1756.8 -40 1800.0 130 S 1876.8 300 1920.0 130" fill="none" stroke="#e3c14f" stroke-width="16" opacity="0.35" filter="url(#glow6)" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><path d="M0 130 C 43.2 -40 76.8 -40 120.0 130 S 196.8 300 240.0 130 S 316.8 -40 360.0 130 S 436.8 300 480.0 130 S 556.8 -40 600.0 130 S 676.8 300 720.0 130 S 796.8 -40 840.0 130 S 916.8 300 960.0 130 S 1036.8 -40 1080.0 130 S 1156.8 300 1200.0 130 S 1276.8 -40 1320.0 130 S 1396.8 300 1440.0 130 S 1516.8 -40 1560.0 130 S 1636.8 300 1680.0 130 S 1756.8 -40 1800.0 130 S 1876.8 300 1920.0 130" fill="none" stroke="#e3c14f" stroke-width="5" pathLength="1000" stroke-dasharray="1000" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.8s" begin="0s"/></path><circle cx="0" cy="130" r="11" fill="#6fb6ff"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear" path="M0 0 C 43.2 -170 76.8 -170 120.0 0 S 196.8 170 240.0 0 S 316.8 -170 360.0 0 S 436.8 170 480.0 0 S 556.8 -170 600.0 0 S 676.8 170 720.0 0 S 796.8 -170 840.0 0 S 916.8 170 960.0 0 S 1036.8 -170 1080.0 0 S 1156.8 170 1200.0 0 S 1276.8 -170 1320.0 0 S 1396.8 170 1440.0 0 S 1516.8 -170 1560.0 0 S 1636.8 170 1680.0 0 S 1756.8 -170 1800.0 0 S 1876.8 170 1920.0 0"/></circle></svg>
+<p class="bignum slide" style="--i:0">06</p>
+<p class="eyebrow slide" style="--i:1">PRODUCTO FINAL</p>
+<h1 class="slide" style="--i:2">Lo que el estudiante vive</h1>
+<p class="question slide" style="--i:3">¿Qué pasa cuando lo pruebas?</p>
+<aside>Sexto punto: estrategias de interactividad, gamificación, usabilidad y accesibilidad, y los hallazgos de las pruebas. En la última misión la onda pasa a dorado: la transmisión ya está casi restaurada.</aside>
+</section>
+<section id="interactividad" class="dark" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">06</p>
+<p class="eyebrow">06 · PRODUCTO FINAL · INTERACTIVIDAD</p>
+<h2>Interactuar no es hacer clic: es decidir</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div class="card fragment"><p class="tag">PREDICE ANTES DE MEZCLAR</p><p class="small">En la Misión 2 el sandbox se abre solo después de predecir cómo deshacer el daño; luego se comprueba con audio.</p></div>
+<div class="card fragment"><p class="tag">ESCUCHA A / B</p><p class="small">Original y procesado sobre la misma reproducción: el cambio conserva la posición, para comparar de oído al instante.</p></div>
+<div class="card fragment"><p class="tag">TU PROPIO AUDIO</p><p class="small">Carga un WAV o MP3 de hasta 60 s y convoluciónalo o fíltralo. Nunca sale del navegador.</p></div>
+<div class="card fragment"><p class="tag">RETROALIMENTACIÓN Y REINTENTO</p><p class="small">Explicación por opción en cada actividad; en los puntos de control, retroalimentación por criterio y un bucle de repaso.</p></div>
+</div>
+<div class="pageno"></div>
+<aside>La interactividad está pensada para tomar decisiones, no para avanzar pantallas: predecir antes de manipular, comparar A/B de oído, experimentar con el propio audio y recibir retroalimentación específica. Cada punto de control combina manipulación de audio real con una justificación del estudiante.</aside>
+</section>
+<section id="gamificacion" class="gold" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">06</p>
+<div class="row" style="align-items:center;gap:80px">
+<img class="tilt" src="img/insignia.png" alt="Insignia dorada con una estrella: Ingeniero de Sonido" style="width:400px;height:400px;object-fit:contain;border-radius:200px;box-shadow:0 30px 70px rgba(11,37,69,0.45)">
+<div style="flex:1">
+<p class="eyebrow" style="color:#0b2545">06 · PRODUCTO FINAL · GAMIFICACIÓN</p>
+<h2 style="color:#0b2545">Cinco insignias, un mensaje escondido</h2>
+<p class="in" style="--i:2;color:#14213d;margin-bottom:28px">Cada punto de control superado desbloquea una insignia y un fragmento del mensaje. Al reunir los cinco, se escucha la transmisión completa.</p>
+<p class="mono in" style="--i:3;font-size:26px;color:#0b2545;line-height:1.7">Domador de Ondas · Maestro de la Mezcla · Arquitecto del Eco · Cazador de Armónicos · Guardián del Filtro → <b>Ingeniero de Sonido</b></p>
+</div>
+</div>
+<div class="pageno"></div>
+<aside>La gamificación no es decorativa: la narrativa da unidad a los cinco temas, las misiones segmentan el recorrido, los fragmentos del mensaje dan una meta concreta y las insignias reconocen el avance. La insignia final, Ingeniero de Sonido, se gana al diseñar el efecto propio y entregar la bitácora. El mensaje restaurado dice: «Bienvenido a Reconocimiento de Patrones. Las señales que acabas de restaurar son los datos con los que vas a enseñarle a una máquina a reconocer patrones».</aside>
+</section>
+<section id="usabilidad" class="light" data-transition="push" style="padding:128px 128px 160px">
+<p class="ghostnum" aria-hidden="true">06</p>
+<p class="eyebrow">06 · PRODUCTO FINAL · USABILIDAD Y ACCESIBILIDAD</p>
+<h2>Diseñado para que nadie se quede por fuera</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
+<div class="card in" style="--i:1"><p class="tag">NAVEGACIÓN</p><p class="small">Índice lateral libre, progreso visible y botones anterior y siguiente en cada capítulo.</p></div>
+<div class="card in" style="--i:2"><p class="tag">TECLADO</p><p class="small">Todos los controles se usan con teclado, con foco visible y descripción hablada de cada gráfica.</p></div>
+<div class="card in" style="--i:3"><p class="tag">CONTRASTE</p><p class="small">Texto con contraste de al menos 4,5:1; antes y después se distinguen también por el trazo, no solo por el color.</p></div>
+<div class="card in" style="--i:4"><p class="tag">AUDIO ACCESIBLE</p><p class="small">Transcripción «Ver texto» en cada audio y video con subtítulos.</p></div>
+<div class="card in" style="--i:5"><p class="tag">CUIDADO AUDITIVO</p><p class="small">Limitador con pico de −1 dBFS, volumen inicial al 70 % y aviso para usar audífonos.</p></div>
+<div class="card in" style="--i:6"><p class="tag">SIN SORPRESAS</p><p class="small">Nada suena solo, se respeta la reducción de movimiento y funciona desde 1366 × 768.</p></div>
+</div>
+<div class="pageno"></div>
+<aside>Criterios de usabilidad y accesibilidad aplicados en el producto: navegación libre al estilo libro interactivo, uso completo con teclado, regiones vivas que describen las gráficas, contraste verificado, transcripciones y subtítulos, y seguridad auditiva para la experiencia con audio.</aside>
+</section>
+<section id="cierre" class="dark">
+<img class="bleed zoom" src="img/climax.jpg" alt="Los cinco fragmentos unidos en una senoidal limpia con la fila de insignias" style="width:1920px;height:1080px;object-fit:cover">
+<div class="shade"></div>
+<div style="position:absolute;left:128px;top:128px;width:1200px">
+<p class="eyebrow in" style="--i:1">TRANSMISIÓN RESTAURADA</p>
+<h1 class="in" style="--i:2;margin-bottom:48px">Misión cumplida.</h1>
+<div class="col" style="gap:16px">
+<p class="in" style="--i:3;color:#e9eef6">Libro H5P de 26 capítulos con 51 actividades</p>
+<p class="in" style="--i:4;color:#e9eef6">Seis módulos de audio en vivo</p>
+<p class="in" style="--i:5;color:#e9eef6">Tráiler de 45 s y póster de campaña</p>
+<p class="in" style="--i:6;color:#e9eef6">Curso en Moodle con rúbrica e insignia</p>
+</div>
+<p class="mono in" style="--i:7;font-size:24px;color:#6fb6ff;margin-top:48px">leunameek.github.io/mision-senal-perdida</p>
+</div>
+<p class="in" style="--i:8;position:absolute;left:128px;top:880px;width:900px;font-size:44px;font-weight:700;color:#c9a227">¿Preguntas?</p>
+<aside>Cerramos con el clímax del tráiler: los cinco fragmentos unidos. Entregamos el libro H5P, los módulos en vivo, el tráiler, el póster y el curso configurado en Moodle. Buen momento para una demo en vivo del capítulo 16, convolución, o del 24, filtrado.</aside>
+</section>
+</div>
+<div id="bar"></div>
+<div id="notes" aria-live="polite"></div>
+<div id="hint">← → avanzar · F pantalla completa · N notas</div>
+<script>
+const stage = document.getElementById('stage');
+const slides = [...stage.children];
+let cur = 0;
+slides.forEach((s, i) => {
+  // painting order like the Slides format: pinned backdrops listed before the first flow child sit underneath
+  for (const el of s.children) {
+    if (el.tagName === 'ASIDE') continue;
+    if (getComputedStyle(el).position !== 'absolute') break;
+    el.style.zIndex = '-1';
+  }
+  s.querySelectorAll('.pageno').forEach((p) => (p.textContent = String(i + 1)));
+});
+function fit() {
+  const k = Math.min(innerWidth / 1920, innerHeight / 1080);
+  stage.style.transform = `scale(${k})`;
+  stage.style.left = (innerWidth - 1920 * k) / 2 + 'px';
+  stage.style.top = (innerHeight - 1080 * k) / 2 + 'px';
+}
+function show(i, dir = 1, revealAll = false) {
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  slides[cur].classList.remove('active', 'enter-fwd', 'enter-back');
+  const s = slides[i];
+  s.querySelectorAll('.fragment').forEach((f) => f.classList.toggle('visible', revealAll));
+  void s.offsetWidth;
+  s.classList.add('active', dir > 0 ? 'enter-fwd' : 'enter-back');
+  s.querySelectorAll('svg').forEach((g) => g.setCurrentTime && g.setCurrentTime(0));
+  cur = i;
+  history.replaceState(null, '', '#' + (i + 1));
+  document.getElementById('bar').style.width = ((i + 1) / slides.length) * 100 + '%';
+  const a = s.querySelector('aside');
+  document.getElementById('notes').textContent = a ? a.textContent : '';
+}
+function next() {
+  const f = slides[cur].querySelector('.fragment:not(.visible)');
+  if (f) f.classList.add('visible'); else if (cur < slides.length - 1) show(cur + 1, 1);
+}
+function prev() { if (cur > 0) show(cur - 1, -1, true); }
+addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
+  else if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
+  else if (e.key === 'Home') show(0, -1);
+  else if (e.key === 'End') show(slides.length - 1, 1, true);
+  else if (e.key.toLowerCase() === 'f') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+  else if (e.key.toLowerCase() === 'n') document.getElementById('notes').classList.toggle('on');
+});
+addEventListener('click', (e) => { if (!e.target.closest('a')) (e.clientX < innerWidth / 3 ? prev() : next()); });
+let tx = null;
+addEventListener('touchstart', (e) => (tx = e.touches[0].clientX), { passive: true });
+addEventListener('touchend', (e) => { if (tx === null) return; const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 40) (d < 0 ? next() : prev()); tx = null; });
+addEventListener('resize', fit);
+fit();
+show(Math.max(0, (parseInt(location.hash.slice(1)) || 1) - 1), 1);
+</script>
+</body></html>

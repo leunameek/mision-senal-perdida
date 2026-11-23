@@ -1,0 +1,90 @@
+/* Misión: Señal Perdida — identidad del OVA (azul noche UMNG, dorado, traza de osciloscopio) */
+:root {
+  --night: #071428;
+  --navy: #0b2545;
+  --panel: #13315c;
+  --paper: #f5f1e6;
+  --ink: #0b2545;
+  --ink-soft: #3d4a5c;
+  --text: #e9eef6;
+  --muted: #a9bbd4;
+  --trace: #6fb6ff;
+  --gold: #c9a227;
+  --gold-bright: #e3c14f;
+  --gold-deep: #8a6a0b;
+}
+
+body { font-family: 'Outfit', Arial, sans-serif; }
+
+section { padding: 128px; box-sizing: border-box; counter-increment: page; }
+section.dark { background: linear-gradient(150deg, #10305c 0%, #071428 55%, #040b17 100%); color: var(--text); }
+section.light { background: linear-gradient(160deg, #fbf8ef 0%, #ebe4d1 100%); color: var(--ink); }
+section.gold { background: linear-gradient(135deg, #e3c14f 0%, #c9a227 60%, #a8841a 100%); color: var(--navy); }
+section.divider { background: linear-gradient(160deg, #0d2a52 0%, #050d1a 70%); color: var(--text); }
+
+/* type scale 120 / 72 / 44 / 32 / 24 */
+.eyebrow { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 24px; letter-spacing: 4px; font-weight: 700; margin: 0 0 24px; }
+.dark .eyebrow, .divider .eyebrow { color: var(--gold); }
+.light .eyebrow { color: var(--gold-deep); }
+h1 { font-size: 120px; font-weight: 800; line-height: 1.0; margin: 0; }
+h2 { font-size: 72px; font-weight: 800; line-height: 1.05; margin: 0 0 40px; }
+h3 { font-size: 44px; font-weight: 700; line-height: 1.1; margin: 0 0 16px; }
+p { font-size: 32px; line-height: 1.4; margin: 0; }
+.dark p, .divider p { color: var(--muted); }
+.light p { color: var(--ink-soft); }
+.dark h3 { color: var(--text); }
+.light h3 { color: var(--ink); }
+.small { font-size: 24px; line-height: 1.4; }
+.mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+/* giant background numbers: depth behind every content slide (first child = painted under) */
+.ghostnum { position: absolute; right: 40px; top: -60px; width: 900px; text-align: right; font-size: 400px; font-weight: 900; line-height: 1; margin: 0; }
+.dark .ghostnum, .divider .ghostnum { color: rgba(111,182,255,0.07); }
+.light .ghostnum { color: rgba(11,37,69,0.06); }
+.gold .ghostnum { color: rgba(11,37,69,0.10); }
+
+/* full-bleed backdrops come first in each slide */
+.bleed { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.shade { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; background: linear-gradient(90deg, rgba(5,13,26,0.97) 0%, rgba(5,13,26,0.85) 45%, rgba(5,13,26,0.1) 100%); }
+
+/* cards: depth + gold edge */
+.row { display: flex; gap: 32px; }
+.col { display: flex; flex-direction: column; gap: 24px; }
+.card { flex: 1; border-radius: 18px; padding: 40px; box-sizing: border-box; }
+.dark .card { background: linear-gradient(160deg, #1a3d70 0%, #0c2240 100%); border-top: 5px solid #c9a227; box-shadow: 0 28px 60px rgba(0,0,0,0.5); }
+.light .card { background: #fffdf7; border-top: 5px solid #c9a227; box-shadow: 0 22px 50px rgba(11,37,69,0.16); }
+.card .num { font-size: 72px; font-weight: 800; line-height: 1; margin: 0 0 16px; color: var(--gold-bright); }
+.light .card .num { color: var(--gold-deep); }
+.card .tag { font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 24px; letter-spacing: 2px; font-weight: 700; margin: 0 0 12px; color: var(--trace); }
+.light .card .tag { color: #1f5fa8; }
+
+/* pictures with presence */
+.shot { border-radius: 14px; box-shadow: 0 30px 70px rgba(0,0,0,0.55); }
+.light .shot { box-shadow: 0 26px 60px rgba(11,37,69,0.25); }
+
+/* page number from the deck's own counter */
+.pageno { position: absolute; right: 128px; bottom: 56px; width: 200px; text-align: right; font-family: 'JetBrains Mono', 'Courier New', monospace; font-size: 24px; color: var(--muted); }
+.pageno::after { content: counter(page); }
+.light .pageno, .gold .pageno { color: #5b6676; }
+
+/* divider slides */
+.divider .bignum { font-size: 240px; font-weight: 900; line-height: 0.9; margin: 0 0 8px; color: var(--gold); }
+.divider h1 { color: var(--text); width: 1500px; }
+.divider .question { margin-top: 36px; font-size: 44px; line-height: 1.25; color: var(--trace); width: 1400px; }
+.divwave { position: absolute; left: 0; top: 760px; width: 1920px; height: 260px; }
+
+/* arrival motion: the plain rule is the finished look */
+@keyframes rise { from { opacity: 0; transform: translateY(40px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slidein { from { opacity: 0; transform: translateX(-80px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes tiltin { from { opacity: 0; transform: translateY(60px) rotate(8deg); } to { opacity: 1; transform: translateY(0) rotate(4deg); } }
+@keyframes zoomin { from { opacity: 0; transform: scale(1.12); } to { opacity: 1; transform: scale(1); } }
+.in { animation: rise 700ms cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i, 0) * 130ms); }
+.fade { animation: fadein 900ms ease-out both; }
+.slide { animation: slidein 700ms cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i, 0) * 130ms); }
+.zoom { animation: zoomin 1400ms cubic-bezier(.2,.8,.2,1) both; }
+.tilt { transform: rotate(4deg); animation: tiltin 900ms cubic-bezier(.2,.8,.2,1) both; animation-delay: 200ms; }
+
+/* speaker-paced reveals */
+.fragment { opacity: 0; transform: translateY(36px); transition: opacity 500ms ease-out, transform 500ms ease-out; }
+.fragment.visible { opacity: 1; transform: translateY(0); }
